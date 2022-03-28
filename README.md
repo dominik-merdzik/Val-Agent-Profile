@@ -1,2 +1,3 @@
 # Val-Agent-Profile
-[UML Diagram.pdf](https://github.com/dominik-merdzik/Val-Agent-Profile/files/8365710/UML.Diagram.pdf)
+![Untitled Workspace (1)](https://user-images.githubusercontent.com/92061523/160472614-36a0cbc9-8fa6-4dcc-88ac-54f5655ad3e4.png)
+
