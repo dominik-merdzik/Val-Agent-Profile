@@ -7,19 +7,31 @@ import java.util.List;
 
 public class AgentDetails extends Agents  {
 
-    public AgentDetails(String agent, String abilityOne, String abilityTwo, String abilityThree, String abilityFour) {
-        super(agent, abilityOne, abilityTwo, abilityThree, abilityFour);
+    public AgentDetails(String agent, ArrayList<String> abilities) {
+        super(agent, abilities);
     }
 
-    public List<String> getAbilities(){
-        return Arrays.asList(getAbilityOne(), getAbilityTwo(), getAbilityThree(), getAbilityFour());
-    }
+
+//    public ArrayList<String> getAbilities(){
+//        return getAbilityOne() getAbilityTwo(), getAbilityThree(), getAbilityFour();
+//    }
 
     public List<String> getJettAbilities() {
         return Arrays.asList("Dash", "Smoke", "Daggers", "updraft");
     }
 
+    public void addAbilities(String[] abilities){
+        this.getAbilities().addAll(Arrays.asList(abilities));
+    }
+    public ArrayList<String> getAgentAbilities() {
+        return getAbilities();
+    }
 
 
+    public List<String> getAgentList() {
+        return Arrays.asList("Astra", "Breach", "Brimstone", "Chamber", "Cypher", "Jett", "Kay/o"
+                , "Killjoy", "Neon", "Omen", "Phoenix", "Raze", "Reyna", "Sage", "Skye", "Sova"
+                , "Viper", "Your");
+    }
 
 }
