@@ -1,5 +1,8 @@
 package com.example.valagentprofile;
 
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +28,8 @@ public class AgentProfileController implements Initializable {
     private Scene scene;
     private Parent root;
 
-    public void switchToScene1(ActionEvent event) throws IOException {
+    @FXML
+    void switchToScene1(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("agent-profile-view.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -33,7 +37,8 @@ public class AgentProfileController implements Initializable {
         stage.show();
     }
 
-    public void switchToScene2(ActionEvent event) throws IOException{
+    @FXML
+    void switchToScene2(ActionEvent event) throws IOException{
         root = FXMLLoader.load(getClass().getResource("add-agent-view.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -48,7 +53,7 @@ public class AgentProfileController implements Initializable {
     private URL location;
 
     @FXML
-    private ListView<?> agentAbilities;
+    private ListView<String> agentAbilities;
 
     @FXML
     private Button agentDetails;
@@ -60,11 +65,22 @@ public class AgentProfileController implements Initializable {
     private Label agentName;
 
     @FXML
-    private ComboBox<?> agentSelectComboBox;
+    private ComboBox<String> agentSelectComboBox;
 
     @FXML
     private Button createNewAgent;
 
+
+    @FXML
+    void Select (ActionEvent event)throws IOException{
+        String selectedAgent = agentSelectComboBox.getSelectionModel().getSelectedItem().toString();
+        agentAbilities.getItems().clear();
+        agentName.setText("");
+
+        if (selectedAgent.equals("Jett")){
+            jett();
+        }
+    }
 
     private AgentDetails jett;
 
@@ -72,15 +88,24 @@ public class AgentProfileController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 //        jett = new AgentDetails("Jett","Dash", "Smoke", "Daggers", "updraft");
         jett = new AgentDetails("Jett", new ArrayList<String>());
-        jett.addAbilities(new String[]{"Dash","Daggers","Updraft","smoke"});
-        jett();
+//        jett.addAbilities(new String[]{"Dash","Daggers","Updraft","smoke"});
+        ObservableList<String> list = FXCollections.observableArrayList("Astra", "Breach", "Brimstone", "Chamber", "Cypher", "Jett", "Kay/o"
+                , "Killjoy", "Neon", "Omen", "Phoenix", "Raze", "Reyna", "Sage", "Skye", "Sova"
+                , "Viper", "Your");
+        agentSelectComboBox.setItems(list);
+
+
+
 
     }
 
     private void jett(){
 
         agentName.setText(jett.getAgent());
-        //agentAbilities.getItems().addAll(jett.getJettAbilities());
+//        agentImage.setImage(jett.getAgentImage());
+//        agentImage.setFitHeight(310);
+//        agentImage.setFitWidth(220);
+        agentAbilities.getItems().addAll(jett.getJettAbilities());
 
     }
 
