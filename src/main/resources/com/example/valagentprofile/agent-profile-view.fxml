@@ -4,32 +4,94 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.valagentprofile.AgentProfileController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1007.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.valagentprofile.AgentProfileController">
    <children>
-      <Label layoutX="155.0" layoutY="14.0" text="Valorant Agent Profiles">
+      <Label layoutX="359.0" layoutY="14.0" text="Valorant Agent Profiles">
          <font>
             <Font name="Monospaced Regular" size="21.0" />
          </font>
       </Label>
-      <Button id="createNewAgent" fx:id="createNewAgent" layoutX="225.0" layoutY="363.0" mnemonicParsing="false" onAction="#switchToScene2" text="Create new agent">
+      <Button id="createNewAgent" fx:id="createNewAgent" layoutX="438.0" layoutY="660.0" mnemonicParsing="false" onAction="#switchToScene2" text="Create new agent">
          <font>
             <Font name="Monospaced Bold" size="12.0" />
          </font>
       </Button>
-      <ComboBox fx:id="agentSelectComboBox" layoutX="339.0" layoutY="71.0" onAction="#Select" prefWidth="150.0" />
-      <Text layoutX="300.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent:" />
-      <Text layoutX="393.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abilities" />
-      <ImageView fx:id="agentImage" fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="agentName" layoutX="365.0" layoutY="122.0" prefHeight="17.0" prefWidth="100.0" />
-      <ListView fx:id="agentAbilities" layoutX="357.0" layoutY="166.0" prefHeight="117.0" prefWidth="132.0" />
-      <Text layoutX="291.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 1 -" />
-      <Text layoutX="291.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 2 -" />
-      <Text layoutX="291.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 3 -" />
-      <Text layoutX="291.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 4 -" />
+      <ComboBox fx:id="agentSelectComboBox" layoutX="771.0" layoutY="75.0" onAction="#Select" prefWidth="150.0" />
+      <Text layoutX="731.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent:">
+         <font>
+            <Font name="Monospaced Bold" size="12.0" />
+         </font></Text>
+      <Text layoutX="825.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abilities">
+         <font>
+            <Font name="Monospaced Regular" size="12.0" />
+         </font></Text>
+      <ImageView fx:id="agentImage" fitHeight="150.0" fitWidth="200.0" layoutX="739.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="agentName" layoutX="789.0" layoutY="121.0" prefHeight="17.0" prefWidth="100.0">
+         <font>
+            <Font name="Monospaced Regular" size="12.0" />
+         </font></Label>
+      <ListView fx:id="agentAbilities" layoutX="789.0" layoutY="251.0" prefHeight="117.0" prefWidth="132.0" />
+      <Text layoutX="706.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 1 -">
+         <font>
+            <Font name="Monospaced Regular" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="706.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 2 -">
+         <font>
+            <Font name="Monospaced Regular" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="706.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 3 -">
+         <font>
+            <Font name="Monospaced Regular" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="713.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimate -">
+         <font>
+            <Font name="Monospaced Regular" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="738.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:">
+         <font>
+            <Font name="Monospaced Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label fx:id="agentRole" layoutX="789.0" layoutY="144.0" prefHeight="17.0" prefWidth="94.0">
+         <font>
+            <Font name="Monospaced Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="agentReleasePatch" layoutX="789.0" layoutY="167.0" prefHeight="17.0" prefWidth="94.0">
+         <font>
+            <Font name="Monospaced Regular" size="12.0" />
+         </font>
+      </Label>
+      <Text layoutX="673.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Release Patch:" wrappingWidth="106.0">
+         <font>
+            <Font name="Monospaced Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label fx:id="currentPatchLabel" layoutX="14.0" layoutY="663.0" prefHeight="17.0" prefWidth="94.0" />
+      <TextField fx:id="agentNameTextField" layoutX="230.0" layoutY="153.0" />
+      <TextField fx:id="agentRoleTextField" layoutX="230.0" layoutY="196.0" />
+      <TextField fx:id="releasePatchTextField" layoutX="230.0" layoutY="237.0" />
+      <TextField fx:id="abilityThreeTextField" layoutX="230.0" layoutY="371.0" />
+      <TextField fx:id="abilityTwoTextField" layoutX="230.0" layoutY="328.0" />
+      <TextField fx:id="abilityOneTextField" layoutX="230.0" layoutY="284.0" />
+      <TextField fx:id="abilityFourTextField" layoutX="230.0" layoutY="414.0" />
+      <Text layoutX="133.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent:" />
+      <Text layoutX="133.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:" />
+      <Text layoutX="108.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Release Patch:" />
+      <Text layoutX="133.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 1:" />
+      <Text layoutX="133.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 2:" />
+      <Text layoutX="133.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 3:" />
+      <Text layoutX="133.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimate:" />
+      <Button fx:id="addAgentButton" layoutX="438.0" layoutY="414.0" mnemonicParsing="false" onAction="#addAgentButtonEvent" text="Add Agent" />
    </children>
 </AnchorPane>

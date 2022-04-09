@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.valagentprofile.AgentProfileController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.valagentprofile.AddAgentController">
    <children>
-      <Button fx:id="homeButton" layoutX="274.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToScene1" text="Home">
+      <Button fx:id="homeButton" layoutX="242.0" layoutY="363.0" mnemonicParsing="false" onAction="#switchToScene1" text="Current Agents">
          <font>
             <Font name="Monospaced Regular" size="12.0" />
          </font>
       </Button>
+      <TextField fx:id="agentNameTextField" layoutX="229.0" layoutY="57.0" />
+      <TextField fx:id="agentRoleTextField" layoutX="229.0" layoutY="100.0" />
+      <TextField fx:id="releasePatchTextField" layoutX="229.0" layoutY="141.0" />
+      <TextField fx:id="abilityThreeTextField" layoutX="229.0" layoutY="275.0" />
+      <TextField fx:id="abilityTwoTextField" layoutX="229.0" layoutY="232.0" />
+      <TextField fx:id="abilityOneTextField" layoutX="229.0" layoutY="188.0" />
+      <TextField fx:id="abilityFourTextField" layoutX="229.0" layoutY="318.0" />
+      <Text layoutX="164.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent:" />
+      <Text layoutX="164.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:" />
+      <Text layoutX="139.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Release Patch:" />
+      <Text layoutX="164.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 1:" />
+      <Text layoutX="164.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 2:" />
+      <Text layoutX="164.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ability 3:" />
+      <Text layoutX="164.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ultimate:" />
+      <Button fx:id="addAgentButton" layoutX="425.0" layoutY="318.0" mnemonicParsing="false" text="Add Agent" />
    </children>
 </AnchorPane>

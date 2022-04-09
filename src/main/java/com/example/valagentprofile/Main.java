@@ -24,6 +24,7 @@ public class Main extends Application {
         primaryStage.setTitle("Agent Profiles!");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
     }
 
 
@@ -31,10 +32,6 @@ public class Main extends Application {
 
         launch();
 
-//        AgentDetails jett = new AgentDetails("Jett","Dash", "Smoke", "Daggers", "updraft");
-//        System.out.println(jett.getJettAbilities());
-//        System.out.println(jett.getAgent());
-//        System.out.println(jett.getAbilities());
-//        System.out.println(jett.getAgentList());
+
     }
 }
