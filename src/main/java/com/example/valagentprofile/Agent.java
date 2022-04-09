@@ -22,6 +22,10 @@ public class Agent {
         setAbilities(abilities);
         setRole(role);
         setReleasePatch(releasePatch);
+        imageGetter();
+    }
+
+    public void imageGetter() {
         if (getValidAgents().contains(agentName)) {
             String agentPicture = "images/agent-" + agentName + ".PNG";
             agentImage = new Image(getClass().getResource(agentPicture).toExternalForm());
@@ -31,6 +35,12 @@ public class Agent {
         }
     }
 
+    public Agent(String agentName, ArrayList<String> abilities, String role, String releasePatch) {
+        setAgentName(agentName);
+        setAbilities(abilities);
+        setRole(role);
+        setReleasePatch(Double.parseDouble(releasePatch));
+    }
 
     public String getAgentName() {
 
