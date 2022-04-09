@@ -59,7 +59,7 @@ public class AgentProfileController implements Initializable {
     private Label agentName;
 
     @FXML
-    private ComboBox<String> agentSelectComboBox;
+    private ComboBox<Agent> agentSelectComboBox;
 
     @FXML
     private Button createNewAgent;
@@ -112,7 +112,7 @@ public class AgentProfileController implements Initializable {
 
         usersAgent = new Agent(agentNameScene, new ArrayList<String>(), agentRoleScene, Double.parseDouble(releasePatch));
         usersAgent.addAbilities(new String[]{abilityOne, abilityTwo, abilityThree, abilityFour});
-        agentSelectComboBox.getItems().add(usersAgent.getAgentName());
+        agentSelectComboBox.getItems().add(usersAgent);
     }
 
         @FXML
@@ -205,10 +205,19 @@ public class AgentProfileController implements Initializable {
         viper.addAbilities(new String[]{"Snake bite","Poison Cloud","Toxic Screen","Viper's Pit"});
 
         game.addAgent(breach);
+        game.addAgent(brimstone);
+        game.addAgent(cypher);
+        game.addAgent(jett);
+        game.addAgent(omen);
+        game.addAgent(phoenix);
+        game.addAgent(raze);
+        game.addAgent(reyna);
+        game.addAgent(sage);
+        game.addAgent(sova);
+        game.addAgent(viper);
+
         // combo box list of agents
-        ObservableList<String> list = FXCollections.observableArrayList( breach.getAgentName(), brimstone.getAgentName(), cypher.getAgentName()
-                , jett.getAgentName(), omen.getAgentName(), phoenix.getAgentName(), raze.getAgentName(), reyna.getAgentName(), sage.getAgentName()
-                , sova.getAgentName(), viper.getAgentName());
+        ObservableList<Agent> list = FXCollections.observableArrayList(game.getAgents());
         agentSelectComboBox.setItems(list);
 
 

@@ -17,11 +17,6 @@
             <Font name="Monospaced Regular" size="21.0" />
          </font>
       </Label>
-      <Button id="createNewAgent" fx:id="createNewAgent" layoutX="438.0" layoutY="660.0" mnemonicParsing="false" onAction="#switchToScene2" text="Create new agent">
-         <font>
-            <Font name="Monospaced Bold" size="12.0" />
-         </font>
-      </Button>
       <ComboBox fx:id="agentSelectComboBox" layoutX="771.0" layoutY="75.0" onAction="#Select" prefWidth="150.0" />
       <Text layoutX="731.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent:">
          <font>

@@ -13,15 +13,7 @@ public class Agent {
     private String role;
     private double releasePatch;
     private Image agentImage;
-    private String abilityOne, abilityTwo, abilityThree, abilityFour;
 
-    public Agent(String agentName, String abilityOne, String abilityTwo, String abilityThree, String abilityFour) {
-        this.agentName = agentName;
-        this.abilityOne = abilityOne;
-        this.abilityTwo = abilityTwo;
-        this.abilityThree = abilityThree;
-        this.abilityFour = abilityFour;
-    }
 
     public Agent(String agentName, ArrayList<String> abilities, String role, double releasePatch) {
         setAgentName(agentName);
@@ -97,6 +89,10 @@ public class Agent {
 
     public List<String> getValidAgents() {
         return Arrays.asList( "Breach", "Brimstone", "Cypher", "Jett", "Omen", "Phoenix", "Raze", "Reyna", "Sage", "Sova", "Viper");
+    }
+
+    public String toString(){
+        return agentName;
     }
 
 }
