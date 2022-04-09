@@ -20,6 +20,8 @@ public class Game {
         agents = new ArrayList<Agent>();
     }
 
+    public Game() {
+    }
 
     public void setAgents(ArrayList<Agent> agents) {
         this.agents = agents;
@@ -37,11 +39,9 @@ public class Game {
         return agents.get(i);
     }
 
-    public void addAgent(Agent agent){
+    public void addAgent(Agent agent) {
         agents.add(agent);
     }
-
-
 
 
 }
