@@ -16,6 +16,8 @@ public class Agent {
 
     Game gameClass = new Game();
 
+    public Agent() {
+    }
 
     public Agent(String agentName, ArrayList<String> abilities, String role, double releasePatch) {
         setAgentName(agentName);
@@ -64,7 +66,7 @@ public class Agent {
     }
 
     public void addAbilities(String[] abilities) {
-        // addAbilities doesnt need validation as there are many unique abilities
+        // addAbilities doesn't need validation as there are many unique abilities, and they can be added in various ways
         this.abilities.addAll(Arrays.asList(abilities));
     }
 
@@ -111,10 +113,6 @@ public class Agent {
 
     public Image getAgentImage() {
         return agentImage;
-    }
-
-    public void setAgentImage(Image agentImage) {
-        this.agentImage = agentImage;
     }
 
     public List<String> getValidAgents() {

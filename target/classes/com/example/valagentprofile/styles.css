@@ -1,0 +1,13 @@
+.button{
+    -fx-padding: 7;
+    -fx-background-color: #e3ded9;
+}
+
+.combo-box{
+    -fx-padding: 2;
+    -fx-background-color: #e3ded9;
+}
+.list-view{
+    -fx-border-color: #e3ded9;
+    -fx-border-radius: 4px;
+}

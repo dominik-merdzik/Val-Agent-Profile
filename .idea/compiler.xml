@@ -13,4 +13,9 @@
       <module name="Val-Agent-Profile" target="17" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Val-Agent-Profile" options="--add-exports java.base/jdk.internal.org.objectweb.asm.commons=com.example.valagentprofile" />
+    </option>
+  </component>
 </project>
